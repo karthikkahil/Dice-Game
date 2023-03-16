@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🎮 Dice Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="http://fonts.cdnfonts.com/css/sf-pro-display"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="top_btn">
+        <button class="top_dice">🎲 Dice Roll</button>
+        <button class="Rules_dice showModal">Rules</button>
+      </div>
+      <div class="sub_container">
+        <section class="section player--0 activeplayer">
+          <h2 class="player">
+            Player 1<span class="bulletPoint" id="activePlayer--0"
+              >&nbsp;&nbsp;&nbsp;&bull;</span
+            >
+          </h2>
+          <p class="score score--0">0</p>
+          <div class="currentscore">
+            <p>Current</p>
+            <p class="currentScore--0">0</p>
+          </div>
+        </section>
+        <section class="section player--1">
+          <h2 class="player">
+            Player 2<span class="bulletPoint hidden" id="activePlayer--1"
+              >&nbsp;&nbsp;&nbsp;&bull;</span
+            >
+          </h2>
+          <p class="score score--1">0</p>
+          <div class="currentscore">
+            <p>Current</p>
+            <p class="currentScore--1">0</p>
+          </div>
+        </section>
+        <section>
+          <img
+            class="btn diceRollimage hidden"
+            src="images/dice_2.png"
+            width="80"
+            alt="Dice_Roll"
+          />
+          <button class="btn newGame">🕹 New Game</button>
+          <button class="btn diceRoll">🎲 Dice Roll</button>
+          <button class="btn scoreHold">📥 Hold Score</button>
+        </section>
+      </div>
+    </div>
+    <div class="overlay hidden"></div>
+    <div class="modal show_modal hidden">
+      <span class="material-symbols-outlined closeModal"> cancel </span>
+      <h2>Rules: ✨</h2>
+      <ul>
+        <li>The game has 2 player, playing in rounds</li>
+        <li>
+          In each turn, a player rolls a dice as many times as he wishes. Each
+          result get added to his ROUND score.
+        </li>
+        <li>
+          BUT. if the player rolls a 1, all his ROUND score gets lost. After
+          that, it's the next player's turn.
+        </li>
+        <li>
+          The player can choose to 'Hold', which means that his ROUND score gets
+          added to his GLOBAL score. After that, it's the next player's turn.
+        </li>
+        <li>
+          The player can choose to 'Hold', which means that his ROUND score gets
+          added to his GLOBAL score. After that, it's the next player's turn.
+        </li>
+      </ul>
+    </div>
+    <script src="modal.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
